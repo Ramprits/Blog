@@ -21,6 +21,9 @@ export class ToggleComponent implements OnInit, AfterViewInit {
   @Input() queryTemplate: TemplateRef<any>;
   @ContentChild("content") content: TemplateRef<any>;
   @ContentChild("content1") view: TemplateRef<any>;
+  @ViewChild("myView") myView: TemplateRef<any>;
+
+  myViewLive: TemplateRef<any>;
   @ViewChild("t1") t1: TemplateRef<any>;
   @ViewChild("t2") t2: TemplateRef<any>;
   @ViewChild("t3") t3: TemplateRef<any>;
@@ -36,8 +39,13 @@ export class ToggleComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.template1 = this.t1;
+      this.template1 = this.t2;
+      this.template1 = this.t3;
       this.liveTemplate = this.view;
       this.contentOutlet = this.content;
     }, 2000);
+    setTimeout(() => {
+      this.myViewLive = this.myView;
+    }, 5000);
   }
 }

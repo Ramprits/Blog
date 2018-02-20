@@ -1,14 +1,38 @@
- {{queryTemplate}}
+<div class="container">
+    <div class="card">
 
-<button class="button is-small is-info" (click)="ClickMe()">Click me</button>
-<br>
-<ng-container *ngTemplateOutlet='liveTemplate'>
-</ng-container>
-<br>
-<ng-container *ngTemplateOutlet='contentOutlet'></ng-container>
-<br>
-<ng-container *ngTemplateOutlet='template1'></ng-container>
+        <div class="card-content">
 
-<ng-template #t1>This is One</ng-template>
-<ng-template #t2>This is two</ng-template>
-<ng-template #t3>This is three</ng-template>
+            <div class="content">
+                <div class="columns">
+                    <div class="column">
+                        <span class="has-text-info">{{queryTemplate}}</span>
+                        <br>
+                        <button class="button is-small is-info" (click)="ClickMe()">Click me</button>
+                        <br>
+                        <ng-container *ngTemplateOutlet='liveTemplate'>
+                        </ng-container>
+                        <br>
+                        <ng-container *ngTemplateOutlet='contentOutlet'></ng-container>
+                        <br>
+                        <ng-container *ngTemplateOutlet='template1'></ng-container>
+
+                        <ng-container *ngTemplateOutlet='myViewLive'></ng-container>
+
+                        <ng-template #loading>
+                            Loading...
+                        </ng-template>
+                        <ng-template #myView>
+                            <h1 class="has-text-danger">Hello this is my view template !</h1>
+                        </ng-template>
+                        <ng-template #t1>This is One</ng-template>
+                        <ng-template #t2>This is two</ng-template>
+                        <ng-template #t3>This is three</ng-template>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
