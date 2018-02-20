@@ -1,0 +1,13 @@
+<h1>{{widgetTitle}}</h1>
+
+<app-toggle queryTemplate="This is input variable !" (help)="showHelp()">
+  <ng-template #content>
+    This is "content" - from inside the child component's element tag and queried with @ContentChild
+  </ng-template>
+  <br>
+  <br>
+
+  <ng-template #content1>
+    This is "view" content - from inside the child component's template and queried with @ViewChild
+  </ng-template>
+</app-toggle>

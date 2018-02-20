@@ -1,0 +1,14 @@
+ {{queryTemplate}}
+
+<button class="button is-small is-info" (click)="ClickMe()">Click me</button>
+<br>
+<ng-container *ngTemplateOutlet='liveTemplate'>
+</ng-container>
+<br>
+<ng-container *ngTemplateOutlet='contentOutlet'></ng-container>
+<br>
+<ng-container *ngTemplateOutlet='template1'></ng-container>
+
+<ng-template #t1>This is One</ng-template>
+<ng-template #t2>This is two</ng-template>
+<ng-template #t3>This is three</ng-template>
