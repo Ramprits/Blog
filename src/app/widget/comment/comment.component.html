@@ -1,0 +1,12 @@
+<ng-container *ngIf="loading;then loadingTemplate else commentTemp">
+
+</ng-container>
+
+<ng-template #loadingTemplate>
+  Loading...
+</ng-template>
+<ng-template #commentTemp>
+  <div *ngFor="let comment of comments">
+    {{comment.name}}
+  </div>
+</ng-template>

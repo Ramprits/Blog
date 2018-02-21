@@ -13,6 +13,7 @@ import * as _ from "lodash";
   styles: []
 })
 export class ViewAndContentChildComponent implements OnInit, AfterViewInit {
+  public users1: any[];
   @ViewChild("ViewChild") ViewChild: TemplateRef<any>;
 
   @ContentChild("content") content: TemplateRef<any>;
@@ -32,6 +33,11 @@ export class ViewAndContentChildComponent implements OnInit, AfterViewInit {
         console.log("params", params);
       }
     });
+    setTimeout(() => {
+      this.users = _.dropWhile(this.users, function(o) {
+        return !o.active;
+      });
+    }, 5000);
   }
 
   ngAfterViewInit() {
