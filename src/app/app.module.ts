@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import 'lodash';
 import { AppRoutingModule } from './app-routing.module';
 
 import { ServiceWorkerModule } from '@angular/service-worker';

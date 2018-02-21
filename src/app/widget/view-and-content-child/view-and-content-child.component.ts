@@ -6,7 +6,7 @@ import {
   ContentChild,
   TemplateRef
 } from "@angular/core";
-
+import * as _ from "lodash";
 @Component({
   selector: "app-view-and-content-child",
   templateUrl: "./view-and-content-child.component.html",
@@ -21,7 +21,9 @@ export class ViewAndContentChildComponent implements OnInit, AfterViewInit {
   showViewTemplate = true;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("lodash version:", _.VERSION);
+  }
   ngAfterViewInit() {
     setTimeout(() => {
       this.LiveTemplate = this.content;
