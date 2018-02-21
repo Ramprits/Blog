@@ -1,22 +1,14 @@
 <div class="container">
   <button class="button is-info is-small" *ngIf="showViewTemplate" (click)="ToggleButton()">
     Show </button>
-
   <button class="button is-danger is-small" *ngIf="!showViewTemplate" (click)="ToggleButton()">
     Hide </button>
   <br>
   <br>
   <ng-container *ngTemplateOutlet='LiveTemplate'></ng-container>
-
   <ng-template #ViewChild>
     <span>
       This is "view" content - from inside the child component's template and queried with @ViewChild
     </span>
   </ng-template>
-
-</div>
-<div class="container">
-  <div *ngFor="let item of users">
-    {{item.user}} ----- {{item.active}}
-  </div>
 </div>

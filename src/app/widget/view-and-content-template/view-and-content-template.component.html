@@ -1,13 +1,19 @@
-<p>
-  view-and-content-template works!
-</p>
 <app-view-and-content-child>
 
   <ng-template #content>
     <span>Hello guys this is content template !!!!!!!!!!!!!!!!!!!</span>
   </ng-template>
 </app-view-and-content-child>
-
+<br>
+<div class="container">
+  <app-view-encapsulation></app-view-encapsulation>
+</div>
+<hr>
 <app-comment>
-
+  <hr>
+  <ng-template #CommentTemplate>
+    This is Content Template Ref
+  </ng-template>
 </app-comment>
+
+<hr>

@@ -15,7 +15,6 @@ import * as _ from "lodash";
 export class ViewAndContentChildComponent implements OnInit, AfterViewInit {
   public users1: any[];
   @ViewChild("ViewChild") ViewChild: TemplateRef<any>;
-
   @ContentChild("content") content: TemplateRef<any>;
   text = "View";
   LiveTemplate: TemplateRef<any>;
@@ -24,25 +23,12 @@ export class ViewAndContentChildComponent implements OnInit, AfterViewInit {
   public find: string = "barney";
   ngOnInit() {
     console.log("lodash version:", _.VERSION);
-    // console.log(_.findIndex(this.users, ["active", true]));
-    // console.log(_.concat(this.array1, this.array2));
-    // console.log(_.merge(this.object, this.other));
-    _.forEachRight(this.array1, function(params) {
-      console.log(params);
-      if (params == 6) {
-        console.log("params", params);
-      }
-    });
-    setTimeout(() => {
-      this.users = _.dropWhile(this.users, function(o) {
-        return !o.active;
-      });
-    }, 5000);
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
       this.LiveTemplate = this.content;
+      console.log(this.content);
     }, 5000);
   }
 

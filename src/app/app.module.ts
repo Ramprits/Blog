@@ -17,6 +17,7 @@ import { ViewAndContentTemplateComponent } from "./widget/view-and-content-templ
 import { ViewAndContentChildComponent } from "./widget/view-and-content-child/view-and-content-child.component";
 import { CommentComponent } from "./widget/comment/comment.component";
 import { CommentService } from "./widget/comment/comment.service";
+import { ViewEncapsulationComponent } from './manipulating/view-encapsulation/view-encapsulation.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CommentService } from "./widget/comment/comment.service";
     OutDecoratorComponent,
     ViewAndContentTemplateComponent,
     ViewAndContentChildComponent,
-    CommentComponent
+    CommentComponent,
+    ViewEncapsulationComponent
   ],
   imports: [
     BrowserModule,
